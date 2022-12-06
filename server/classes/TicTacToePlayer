@@ -1,0 +1,64 @@
+class TicTacToPlayer {
+    static COMPUTER_CHARACTER = 'O';
+    static OPPONENT_CHARACTER = 'X';
+
+    analyzeBoard(gameboard)
+    {
+        let availableSpaces = [];
+        for(let row = 0; row < gameboard.squares.length; row++)
+        {
+            for(let col = 0; col < gameboard.squares[row].length; col++)
+            {
+                if(gameboard.isSpaceAvailable(row, col))
+                {
+                    //if the move would let the computer win, make the move
+                    if(gameboard.saveMove(row, col, TicTacToPlayer.COMPUTER_CHARACTER) && gameboard.findWinner(TicTacToPlayer.COMPUTER_CHARACTER))
+                    {
+                        gameboard.clearMove(row, col);
+                        return { row, col };
+                    }
+                    //otherwise, remove the hypothetical move from the gameboard
+                    gameboard.clearMove(row, col);
+
+                    //if the opponent were to make this move and win, block the opponent
+                    if(gameboard.saveMove(row, col, TicTacToPlayer.OPPONENT_CHARACTER) && gameboard.findWinner(TicTacToPlayer.OPPONENT_CHARACTER))
+                    {
+                        gameboard.clearMove(row, col);
+                        return { row, col };
+                    }
+                    //otherwise, remove the hypothetical move from the gameboard
+                    gameboard.clearMove(row, col);
+                    availableSpaces.push({ row, col });
+                }
+            }
+        }
+        //if there are available spaces left on the gameboard, choose one at random to pass back to makeMove
+        if(availableSpaces.length > 0)
+        {
+            let randomMove = this.suggestRandomMove(availableSpaces);
+            return randomMove;
+        }
+        //if all of the spaces are filled, return an object with negative values to signify a draw
+        else
+        {
+            return { row: -1, col: -1 };
+        }
+    }
+
+    makeMove(gameboard){
+        let { row, col } = this.analyzeBoard(gameboard);
+        //if the board is already full before the computer's turn, analyzeBoard will return an object
+        //with negative numbers for the row and col properties
+        if(row > 0 && col > 0)
+        {
+            gameboard.saveMove(row, col, TicTacToPlayer.COMPUTER_CHARACTER);
+        }
+        return { row, col };
+    }
+
+    suggestRandomMove(availableSpaces){
+        let moveIndex = Math.floor(Math.random() * availableSpaces.length);
+        return availableSpaces[moveIndex];
+    }
+}
+module.exports = TicTacToPlayer;

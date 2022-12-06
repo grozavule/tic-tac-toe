@@ -1,0 +1,27 @@
+{
+    "requirements": [
+        "adjective",
+        "noun",
+        "relative",
+        "noun",
+        "verb",
+        "noun",
+        "noun",
+        "adjective",
+        "adjective",
+        "person",
+        "animal",
+        "location",
+        "adjective",
+        "holiday",
+        "adjective",
+        "noun",
+        "noun",
+        "noun",
+        "adjective",
+        "noun",
+        "adjective",
+        "holiday"
+    ],
+    "text": "Dear Santa,\n\nI have been a very {adjective} {noun} this year! I always help my {relative} with chores around the {noun}. It's my job to {verb} the {noun} and take out the {noun} every day.\n\nI really hope that I am on the {adjective} list this year! I have done a lot of {adjective} things, so I think that I deserve it! I even helped {person} feed their {animal} while they were on vacation in {location}.\n\nI have a few {adjective} {holiday} wishes this year, and I would love to see a {adjective} new {noun} underneath the tree with my name on it! It would make me the happiest {noun} on the {noun}! Oh, and if you could put a {adjective} {noun} inside of my stocking. That would be {adjective} too!\n\nMerry {holiday}!"
+}

@@ -1,0 +1,24 @@
+{
+    "requirements": [
+        "place",
+        "number",
+        "flavor",
+        "article of clothing",
+        "type of shoe",
+        "temperature",
+        "number",
+        "number",
+        "name",
+        "plural noun",
+        "food",
+        "number",
+        "color",
+        "color",
+        "plural body part",
+        "plural animal",
+        "holiday",
+        "noun",
+        "plural noun"
+    ],
+    "text": "Tonight we went to grandma's {place} to celebrate Christmas! She lives {number} minutes away. We packed up the car with wrapped gifts, {flavor} chips with chip dip, and us! But first, we had to bundle up with {article of clothing}, scarves, and {type of shoe}s. It sure was {temperature} outside. You should see all of the snow!\n\nEveryone is going to be at Grandma's house today. Little cousin Marni and my older cousin Danny will be here, and at least {number} other cousins and {number} aunts or uncles. My aunt {name} will be in charge of handing out all of the {plural noun}, while Grandpa carves the Christmas {food}.\n\nOn the way here, we saw {number} turkeys! I bet they're happy not to be dinner tonight. We saw house after house with {color} and {color} Christmas lights, snowmen with round {plural body part}, and even a few decorative {plural animal} with Santa hats. We sang along to songs on the radio. My favorite one is 'A Holly Jolly {holiday}.'\n\nTime to open presents! I really hope I get a new {noun}. I definitely don't want any more {plural noun}."
+}
