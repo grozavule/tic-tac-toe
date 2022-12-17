@@ -1,20 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Back End Assessment</title>
+    <title>Tic-Tac-Toe</title>
     <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body class="container">
-<button id="complimentButton">Get a compliment</button>
-<button id="fortuneButton">Have your fortune told</button>
-
-<section id="introduction">
-    <form name="introduction" id="introduction-form">
-        <label for="name">Tell me your name</label>
-        <input type="text" name="name" id="name" required/>
-        <input type="submit" value="Send" />
-    </form>
-</section>
 
 <div id="activities-container">
     <!--// START: TIC-TAC-TOE //-->
@@ -63,28 +53,10 @@
         </div>
     </section>
     <!--// END: TIC-TAC-TOE //-->
-    <!--// START: MADLIBS //-->
-    <section id="madlibs" class="activity">
-        <h1>Mad Libs</h1>
-        <p class="instructions">Choose a story from the drop-down list below, and provide a word that fits the prompt you'll be provided.</p>
-
-        <form name="madlib-selector">
-            <label for="stories">Available Stories</label>
-            <select name="stories" id="stories">
-                <option value="dear-santa">Dear Santa</option>
-                <option value="going-to-grandmas">Going to Grandma's</option>
-            </select>
-            <input type="submit" value="Start" />
-        </form>
-        <div id="madlib-container"></div>
-    </section>
-    <!--// END: MADLIBS //-->
 </div>
 
-<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
-<script src="../node_modules/axios/dist/axios.min.js"></script>
-<script src="main.js"></script>
-<script src="introduction.js"></script>
-<script src="madlibs.js"></script>
+<!-- <script src="../node_modules/axios/dist/axios.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/main.js"></script>
 </body>
 </html>

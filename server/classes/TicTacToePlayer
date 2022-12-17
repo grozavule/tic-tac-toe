@@ -1,8 +1,11 @@
 class TicTacToPlayer {
     static COMPUTER_CHARACTER = 'O';
     static OPPONENT_CHARACTER = 'X';
+    static ANALYSIS_GOAL_COMPUTER_WINS = 1;
+    static ANALYSIS_GOAL_PREVENT_PLAYER_WIN = 2;
+    static ANALYSIS_GOAL_MAKE_MOVE = 3;
 
-    analyzeBoard(gameboard)
+    analyzeBoard(gameboard, goal = TicTacToPlayer.ANALYSIS_GOAL_MAKE_MOVE)
     {
         let availableSpaces = [];
         for(let row = 0; row < gameboard.squares.length; row++)

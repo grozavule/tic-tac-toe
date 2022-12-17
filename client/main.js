@@ -1,4 +1,4 @@
-const BASE_URL = `http://localhost:4000`;
+const BASE_URL = `http://localhost:5005`;
 const PLAYER_CHARACTER = 'X';
 const COMPUTER_CHARACTER = 'O';
 
@@ -9,27 +9,10 @@ const STATUS_DRAW_GAME = 3;
 const STATUS_GAME_ONGOING = 4;
 const STATUS_GAME_RESTARTED = 5;
 
-const complimentBtn = document.getElementById("complimentButton");
-const fortuneBtn = document.getElementById("fortuneButton");
 const boardSpaces = document.querySelectorAll('.ttt-board-cell');
 const ticTacToeBtns = document.querySelectorAll('.ttt-board-space');
 const controlBtns = document.querySelector('#control-buttons');
 const startOverBtn = document.querySelector('#btn-start-over');
-
-const getCompliment = () => {
-    axios.get("http://localhost:4000/api/compliment/")
-        .then(res => {
-            const data = res.data;
-            alert(data);
-    });
-};
-const getFortune = () => {
-    axios.get("http://localhost:4000/api/fortune/")
-        .then(res => {
-            const data = res.data;
-            alert(data);
-    });
-};
 
 const disableAllSpaces = () => {
     ticTacToeBtns.forEach(btn => {
@@ -120,6 +103,4 @@ ticTacToeBtns.forEach(button => {
     button.addEventListener('click', savePlayerMove);
 });
 
-complimentBtn.addEventListener('click', getCompliment);
-fortuneBtn.addEventListener('click', getFortune);
 startOverBtn.addEventListener('click', startGameOver);
